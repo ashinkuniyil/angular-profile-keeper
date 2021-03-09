@@ -13,6 +13,6 @@
           <input matInput formControlName="password" required type="password" />
         </mat-form-field>
       </div>
-      <button mat-flat-button color="primary" class="fw m-t-10" (click)="actLogin()">Login</button>
+      <button mat-flat-button color="primary" class="fw m-t-10" (click)="actLogin()" [disabled]='!loginForm.valid'>Login</button>
   </form>
 </div>

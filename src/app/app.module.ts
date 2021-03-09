@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommunicationInterceptor } from './utilities/communication-handler';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -27,6 +28,7 @@ import { CommunicationInterceptor } from './utilities/communication-handler';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [
     {

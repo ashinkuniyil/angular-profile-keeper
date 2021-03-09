@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DataStore } from '../utilities/data-store';
 import { config } from '../config/app.config';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private _snackBar: MatSnackBar
   ) {
     this.dataStore = DataStore.getInstance();
     this.loginForm = this.formBuilder.group({
@@ -32,9 +34,16 @@ export class LoginComponent implements OnInit {
   actLogin() {
     this.httpClient
       .post(`${config.apiURL}login`, this.loginForm.value)
-      .subscribe((data) => {
-        this.dataStore.setData('token', data);
-        this.router.navigate(['/', 'dashboard']);
-      });
+      .subscribe(
+        (data) => {
+          this.dataStore.setData('token', data);
+          this.router.navigate(['/', 'dashboard']);
+        },
+        (error) => {
+          this._snackBar.open(error?.error?.error, 'close', {
+            duration: 2000,
+          });
+        }
+      );
   }
 }

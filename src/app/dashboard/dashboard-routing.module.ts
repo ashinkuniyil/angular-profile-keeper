@@ -4,11 +4,11 @@ import { DashboardComponent } from './dashboard.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'user-list', pathMatch: 'full' },
+  { path: '', redirectTo: 'user', pathMatch: 'full' },
   {
     path: '',
     component: DashboardComponent,
-    children: [{ path: 'user-list', component: UserListComponent }],
+    children: [{ path: 'user', component: UserListComponent }],
   },
 ];
 

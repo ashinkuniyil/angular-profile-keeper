@@ -72,6 +72,7 @@
     color="primary"
     class="self-end m-t-10"
     (click)="submit()"
+    [disabled]="!profileForm.valid"
   >
     submit
   </button>
