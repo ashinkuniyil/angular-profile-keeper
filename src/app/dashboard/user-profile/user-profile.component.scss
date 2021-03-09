@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  align-content: start;
+}
+.form-item {
+  flex: 0 0 auto;
+  margin: 10px;
+  min-width: 280px;
+}

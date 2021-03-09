@@ -1,0 +1,78 @@
+<form [formGroup]="profileForm" class="flex-display column-direction">
+  <div class="container">
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          formControlName="firstname"
+          required
+          placeholder="Enter first name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          formControlName="lastname"
+          required
+          placeholder="Enter last name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>Emai</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          required
+          type="email"
+          placeholder="Enter email id"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>Address 1</mat-label>
+        <input
+          matInput
+          formControlName="addressOne"
+          required
+          placeholder="Enter address"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>Address 2</mat-label>
+        <input
+          matInput
+          formControlName="addressTwo"
+          placeholder="Enter address"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-item">
+      <mat-form-field appearance="legacy" class="form-item">
+        <mat-label>City</mat-label>
+        <input
+          matInput
+          formControlName="city"
+          required
+          placeholder="Enter city"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    class="self-end m-t-10"
+    (click)="submit()"
+  >
+    submit
+  </button>
+</form>

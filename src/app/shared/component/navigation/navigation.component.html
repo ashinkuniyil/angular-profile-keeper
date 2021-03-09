@@ -1,0 +1,12 @@
+<mat-sidenav #sidenav mode="side" class="bg-base-grey" opened [fixedInViewport]="true"
+  ><div class="content-center column-direction">
+    <fa-icon
+      *ngFor="let icon of icons"
+      [ngClass]="{ 'bg-black': icon.active }"
+      [styles]="{ color: icon.color }"
+      [icon]="icon.name"
+      size="2x"
+      class="p-20"
+    ></fa-icon>
+  </div>
+</mat-sidenav>

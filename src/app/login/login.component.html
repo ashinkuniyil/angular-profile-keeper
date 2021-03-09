@@ -1,0 +1,18 @@
+<div class="container">
+  <fa-icon [icon]="faImdb" size="6x"></fa-icon>
+  <form [formGroup]="loginForm" class="hw">
+      <div class="form-elements">
+        <mat-form-field appearance="legacy" class="form-item">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" required />
+        </mat-form-field>
+      </div>
+      <div class="form-elements">
+        <mat-form-field appearance="legacy" class="form-item">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" required type="password" />
+        </mat-form-field>
+      </div>
+      <button mat-flat-button color="primary" class="fw m-t-10" (click)="actLogin()">Login</button>
+  </form>
+</div>
